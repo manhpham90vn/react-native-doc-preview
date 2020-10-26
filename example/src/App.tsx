@@ -1,23 +1,23 @@
 import * as React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, TouchableOpacity, Text } from 'react-native';
 import ComReactNativeDocPreview from 'com.react-native.doc-preview';
 
-export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+const open = () => {
+  ComReactNativeDocPreview.show("http://www.orimi.com/pdf-test.pdf", "pdf-test.pdf").then((response) => {
+    console.log("ok", response)
+  }).catch((error) => {
+    console.log("error", error)
+  });
+}
 
-  React.useEffect(() => {
-    ComReactNativeDocPreview.show("http://www.orimi.com/pdf-test.pdf", "pdf-test.pdf").then((response) => {
-      console.log("ok", response)
-    }).catch((error) => {
-      console.log("error", error)
-    });
-  }, []);
+export default function App() {
 
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
+    <TouchableOpacity style={styles.container} onPress={open}>
+      <Text>Open</Text>
+    </TouchableOpacity>
   );
+
 }
 
 const styles = StyleSheet.create({
