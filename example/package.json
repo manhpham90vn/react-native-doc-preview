@@ -1,8 +1,8 @@
 {
   "name": "com.react-native.doc-preview-example",
   "description": "Example app for com.react-native.doc-preview",
-  "version": "0.0.1",
-  "private": false,
+  "version": "0.2.0",
+  "private": true,
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
