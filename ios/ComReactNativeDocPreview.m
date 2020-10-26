@@ -2,8 +2,10 @@
 
 @interface RCT_EXTERN_MODULE(ComReactNativeDocPreview, NSObject)
 
-RCT_EXTERN_METHOD(multiply:(float)a withB:(float)b
-                 withResolver:(RCTPromiseResolveBlock)resolve
-                 withRejecter:(RCTPromiseRejectBlock)reject)
+RCT_EXTERN_METHOD(show:(NSString)inputUrl
+                  fileName:(NSString)fileName
+                  withResolver:(RCTPromiseResolveBlock)resolve
+                  withRejecter:(RCTPromiseRejectBlock)reject
+                  )
 
 @end

@@ -1,7 +1,7 @@
 import { NativeModules } from 'react-native';
 
 type ComReactNativeDocPreviewType = {
-  multiply(a: number, b: number): Promise<number>;
+  show(inputUrl: string, fileName: string): Promise<string>;
 };
 
 const { ComReactNativeDocPreview } = NativeModules;
